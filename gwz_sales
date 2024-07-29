@@ -1,3 +1,10 @@
+SELECT 
+    COUNT (orders_id) AS nb
+ FROM `platinum-hour-428810-j0.course16.gwz_orders` 
+ GROUP BY orders_id
+ HAVING nb >= 2
+;
+
 SELECT date_date, orders_id, qty, turnover, purchased_cost, margin
  FROM `platinum-hour-428810-j0.course16.gwz_sales_margin` 
 ;
@@ -15,4 +22,3 @@ SELECT
  GROUP BY purchase_price
  HAVING nb IS NULL
 ;
-
