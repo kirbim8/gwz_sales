@@ -1,0 +1,6 @@
+SELECT 
+    COUNT (orders_id) AS nb
+ FROM `platinum-hour-428810-j0.course16.gwz_orders` 
+ GROUP BY orders_id
+ HAVING nb >= 2
+;
