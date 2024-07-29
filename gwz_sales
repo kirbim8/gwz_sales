@@ -1,0 +1,18 @@
+SELECT date_date, orders_id, qty, turnover, purchased_cost, margin
+ FROM `platinum-hour-428810-j0.course16.gwz_sales_margin` 
+;
+
+
+SELECT *,
+  ROUND((purchase_price * qty), 2) AS purchased_cost,
+  ROUND((turnover - (purchase_price * qty)), 2) AS margin
+FROM `platinum-hour-428810-j0.course16.gwz_sales_margin`
+;
+
+SELECT 
+    COUNT (purchase_price) AS nb
+ FROM `platinum-hour-428810-j0.course16.gwz_sales_margin` 
+ GROUP BY purchase_price
+ HAVING nb IS NULL
+;
+
